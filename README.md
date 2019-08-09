@@ -6,7 +6,8 @@ Typing Practice Game
 ![Screenshot](https://raw.githubusercontent.com/BlackbeardEC/Typing_Practice_Game/master/out.gif "screenshot")
 
 ## Usage
-``` git clone git@github.com:BlackbeardEC/Typing_Practice_Game.git
+```
+git clone git@github.com:BlackbeardEC/Typing_Practice_Game.git
 make
 ./typing_game
 ```
