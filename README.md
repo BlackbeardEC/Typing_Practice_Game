@@ -3,42 +3,20 @@ Typing Practice Game
 **Typing Practice Game** is a game I made to help my 9yr old son practice typing.
 
 #### Screenshot
-![Screenshot software](http://url/screenshot-software.png "screenshot software")
-
-## Download
-* [Version X.Y](https://github.com/username/sw-name/archive/master.zip)
-* Other Versions
+![Screenshot](https://raw.githubusercontent.com/BlackbeardEC/Typing_Practice_Game/master/out.gif "screenshot")
 
 ## Usage
-```$ git clone https://github.com/username/software-project.git
-...
+``` git clone git@github.com:BlackbeardEC/Typing_Practice_Game.git
+make
+./typing_game
 ```
-## Contributors
 
-### Contributors on GitHub
-* [Contributors](https://github.com/username/sw-name/graphs/contributors)
-
-### Translations
-* [Transifex](https://www.transifex.com/projects/p/sw-name/)
-
-### Third party libraries
-* see [LIBRARIES](https://github.com/username/sw-name/blob/master/LIBRARIES.md) files
-
-## License
-* see [LICENSE](https://github.com/username/sw-name/blob/master/LICENSE.md) file
-
-## Version
-* Version X.Y
-
-## How-to use this code
-* see [INSTRUCTIONS](https://github.com/username/sw-name/blob/master/INSTRUCTIONS.md) file
 
 ## Contact
-#### Developer/Company
-* Homepage:
+#### Rich Stadnick
+* Homepage: [www.RS401.com](https://rs401.com/)
 * e-mail:
-* Twitter: [@twitterhandle](https://twitter.com/twitterhandle "twitterhandle on twitter")
-* other communication/social media
+<!-- * Twitter: [@twitterhandle](https://twitter.com/twitterhandle "twitterhandle on twitter") -->
 
-[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=username&url=https://github.com/username/sw-name&title=sw-name&language=&tags=github&category=software)
+<!-- [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=username&url=https://github.com/username/sw-name&title=sw-name&language=&tags=github&category=software) -->
 
