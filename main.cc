@@ -12,11 +12,14 @@ using std::endl;
 
 /*
  *  Trying to make a typing game to help you get better at typing.
- *  Saw the game bisqwit made and used in his 'how fast does bisqwit type' video.
- * */
+ */
 
 #define DELAY 300000
 
+/**
+ * @brief Word class to be able to eaily call word.move() and increment the
+ *      words x position.
+ */
 class Word{
     public:
         std::string word;
@@ -33,6 +36,10 @@ class Word{
         }
 };
 
+/**
+ * @brief WordsWindow class handle loading words from file, picking random word
+ *      keeping track of current words, etc.
+ */
 class WordsWindow{
     private:
         std::random_device rd;/* Random number for random words from file */
@@ -107,6 +114,13 @@ class WordsWindow{
         std::thread play(){
             return std::thread(&WordsWindow::update, this);
         }
+        /**
+         * @brief Check if the string entered is correct.
+         *
+         * @param guess The string entered
+         *
+         * @return bool Returns whether or not it's a match
+         */
         bool check_match(std::string guess){
             for(size_t i=0; i<current_words.size(); i++){
                 if(current_words[i].word == guess){
@@ -125,22 +139,6 @@ class WordsWindow{
 };
 
 int main(void){
-
-    /* Need to get height and width of terminal window, pick random height and random word,
-     * start pushing random word from off screen left to off screen right.
-     * Need to setup input location at bottom of screen.
-     * As random words are chosen, maybe add them to a queue to be popped and pushed across screen.
-     * Maybe instead of loading them into a vector, or as a random word is chosen it is removed fromt he wordlist
-     * vector and pushed onto a current words vector, then when a word is typed in the input area, check if the word
-     * is in the list of current words and if it is, remove it from the current words and add points to score.*/
-    // int row,col;
-    // getmaxyx(stdscr,row,col);		[> get the number of rows and columns <]
-
-    // Figure out how I'm going to run the game loop
-    // Figure out how I'm going to store the current words and setup function to grab random word from words and add it to the current words container and remove from words list container
-    // Write function to pick random height to scroll word at.
-    // Maybe make the word a data type that holds the word and the position
-    // Maybe make a map to map the word in the current words to it's object that holds the word and position
 
     int row, col, score=0;
     /* Init ncurses */
