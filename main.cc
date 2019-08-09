@@ -12,12 +12,18 @@ using std::endl;
 
 /*
  *  Trying to make a typing game to help you get better at typing.
+ *
+ *  TODO: Crate a game over/start screen
+ *        Increase word speed with higher score
+ *        Maybe create levels at different scores and increase word speed and
+ *        length
+ *
  */
 
 #define DELAY 300000
 
 /**
- * @brief Word class to be able to eaily call word.move() and increment the
+ * @brief Word class to be able to easily call word.move() and increment the
  *      words x position.
  */
 class Word{
@@ -74,12 +80,7 @@ class WordsWindow{
             game_over=false;
             delay=0;
             next_word_delay=15;
-            /* Init ncurses */
-            // initscr();
-            // clear();
-            // getmaxyx(stdscr,row,col);		[> get the number of rows and columns <]
             top_win = newwin(r-1,c,0,0);
-            // box(top_win,0,0);
             wrefresh(top_win);
             get_word(words,current_words,rng,r);
         }
@@ -146,7 +147,7 @@ int main(void){
     nocbreak();
     echo();
     clear();
-    getmaxyx(stdscr,row,col);		/* get the number of rows and columns */
+    getmaxyx(stdscr,row,col);/* get the number of rows and columns */
 
     WordsWindow ww(row,col);
     ww.init();
@@ -159,14 +160,6 @@ int main(void){
         std::string guess;
         std::string score_str="Score: ";
         score_str+=std::to_string(score);
-        // mvwscanw(input_win,0,0,*guess);
-
-        // OK this is working, todo: setup variable for score, probably set itt so that every loop score gets concatenated onto 'Score: '
-        // Also setup way to check if guess string matches any of the current words
-        // Maybe make game_over a static variable so that this loop can run based on that also
-        //
-        // That's all for now I guess, maybe later implement a timmer that increments a word counter everytime a word is removed from current_words
-        // then update a variable based on real time, or maybe to start just have a 'game over' screen witth score and stats about words per minute
 
         int ch = mvwgetch(input_win,0,0);
 
